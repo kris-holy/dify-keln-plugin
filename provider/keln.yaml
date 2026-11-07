@@ -1,0 +1,98 @@
+provider: keln
+label:
+  en_US: Keln
+description:
+  en_US: Open models on Keln through an OpenAI-compatible API.
+icon_small:
+  en_US: icon.svg
+icon_small_dark:
+  en_US: icon-dark.svg
+icon_large:
+  en_US: icon.svg
+icon_large_dark:
+  en_US: icon-dark.svg
+help:
+  title:
+    en_US: Get your API key from Keln
+  url:
+    en_US: https://app.keln.ai/signup
+supported_model_types:
+  - llm
+configurate_methods:
+  - predefined-model
+  - customizable-model
+provider_credential_schema:
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Enter your Keln API key
+model_credential_schema:
+  model:
+    label:
+      en_US: Model ID
+    placeholder:
+      en_US: A model ID from https://api.keln.ai/v1/models
+  credential_form_schemas:
+    - variable: api_key
+      label:
+        en_US: API Key
+      type: secret-input
+      required: true
+      placeholder:
+        en_US: Enter your Keln API key
+    - variable: context_size
+      label:
+        en_US: Context size
+      type: text-input
+      required: true
+      default: "131072"
+      placeholder:
+        en_US: The context_length of the model in https://api.keln.ai/v1/models
+    - variable: max_tokens_to_sample
+      label:
+        en_US: Upper bound for max tokens
+      type: text-input
+      required: false
+      default: "32768"
+      placeholder:
+        en_US: Largest value allowed for Max Tokens. Max Tokens covers reasoning and answer together.
+    - variable: function_calling_type
+      label:
+        en_US: Tool calling
+      type: select
+      required: false
+      default: tool_call
+      options:
+        - value: tool_call
+          label:
+            en_US: Supported
+        - value: no_call
+          label:
+            en_US: Not supported
+    - variable: vision_support
+      label:
+        en_US: Vision (image input)
+      type: select
+      required: false
+      default: not_support
+      options:
+        - value: support
+          label:
+            en_US: Supported
+        - value: not_support
+          label:
+            en_US: Not supported
+models:
+  llm:
+    position: models/llm/_position.yaml
+    predefined:
+      - models/llm/*.yaml
+extra:
+  python:
+    provider_source: provider/keln.py
+    model_sources:
+      - models/llm/llm.py

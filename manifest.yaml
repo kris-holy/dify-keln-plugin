@@ -1,0 +1,35 @@
+version: 0.0.1
+type: plugin
+author: keln
+name: keln
+label:
+  en_US: Keln
+description:
+  en_US: Use open models on Keln in Dify through an OpenAI-compatible API, with tool calling, image input and reasoning control.
+icon: icon.svg
+icon_dark: icon-dark.svg
+repo: https://github.com/kris-holy/dify-keln-plugin
+contact: kris@keln.ai
+privacy: PRIVACY.md
+created_at: 2026-11-06T00:00:00Z
+resource:
+  memory: 268435456
+  permission:
+    model:
+      enabled: false
+plugins:
+  models:
+    - provider/keln.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: 1.0.0
+network:
+  domains:
+    - api.keln.ai

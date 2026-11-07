@@ -1,0 +1,21 @@
+# Development state, excluded from the .difypkg
+.git/
+.github/
+.gitignore
+.difyignore
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+*.difypkg
+tests/
