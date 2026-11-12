@@ -23,16 +23,25 @@ page, then save again.
 
 ## Usage
 
-Pick a Keln model in any LLM node, agent or chatbot. The plugin lists these 5 models, all with tool
-calling:
+Pick a Keln model in any LLM node, agent or chatbot. The plugin lists every chat model in Keln's
+catalog, 14 at this release:
 
 | Model | Context | Input | Reasoning effort |
 |---|---|---|---|
 | `zai-org/glm-5.3` | 1,048,576 | text | `low`, `high`, `max` |
 | `zai-org/glm-5.3-flash` | 1,048,576 | text, images | `low`, `high`, `max` |
 | `moonshotai/kimi-k3` | 1,048,576 | text, images | `none`, `low`, `high`, `max` |
-| `qwen/qwen3.8-2.4t-a95b` | 1,010,000 | text | `low`, `medium`, `xhigh` |
+| `qwen/qwen3.8-2.4t-a95b` | 1,000,000 | text | `low`, `medium`, `xhigh` |
 | `deepseek-ai/deepseek-v4.1-flash` | 1,048,576 | text, images | `none`, `low`, `high`, `max` |
+| `deepseek-ai/deepseek-v4-pro-0813` | 1,048,576 | text | `none`, `low`, `high`, `max` |
+| `deepseek-ai/deepseek-v4.1-flash-1017` | 1,048,576 | text, images | `none`, `low`, `high`, `max` |
+| `google/gemma-4-31b-it` | 262,144 | text, images | no setting |
+| `minimaxai/minimax-m3.1-flash` | 1,048,576 | text | `low`, `medium`, `high`, `max` |
+| `moonshotai/kimi-k3.1-pro` | 1,048,576 | text, images | `low`, `high`, `max` |
+| `nvidia/nemotron-3-ultra-550b-a55b` | 262,144 | text | `none`, `medium`, `high` |
+| `openai/gpt-oss-120b` | 131,072 | text | `low`, `medium`, `high` |
+| `qwen/qwen3.8-27b` | 1,000,000 | text, images | `none`, `low`, `medium`, `xhigh` |
+| `zai-org/glm-5.2` | 1,048,576 | text | `none`, `high`, `max` |
 
 - **Tool calling:** use these models in agents and function-call nodes, with streamed tool calls, and
   parallel calls where the model supports them.
@@ -93,6 +102,7 @@ Open an issue at https://github.com/kris-holy/dify-keln-plugin/issues or write t
 
 ## Changelog
 
+- **0.0.2:** all 14 chat models in Keln's catalog; `qwen/qwen3.8-2.4t-a95b` context set to 1,000,000.
 - **0.0.1:** first release.
 
 ## License

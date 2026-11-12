@@ -112,6 +112,15 @@ class OfflineTests(unittest.TestCase):
                 "moonshotai/kimi-k3",
                 "qwen/qwen3.8-2.4t-a95b",
                 "deepseek-ai/deepseek-v4.1-flash",
+                "deepseek-ai/deepseek-v4-pro-0813",
+                "deepseek-ai/deepseek-v4.1-flash-1017",
+                "google/gemma-4-31b-it",
+                "minimaxai/minimax-m3.1-flash",
+                "moonshotai/kimi-k3.1-pro",
+                "nvidia/nemotron-3-ultra-550b-a55b",
+                "openai/gpt-oss-120b",
+                "qwen/qwen3.8-27b",
+                "zai-org/glm-5.2",
             },
         )
         self.assertEqual(self.registration.models_mapping["keln"][0].position.llm[0], MODEL)
