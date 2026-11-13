@@ -12,6 +12,8 @@ repo: https://github.com/kris-holy/dify-keln-plugin
 contact: kris@keln.ai
 privacy: PRIVACY.md
 created_at: 2026-11-06T00:00:00Z
+tags:
+  - agent
 resource:
   memory: 268435456
   permission:
